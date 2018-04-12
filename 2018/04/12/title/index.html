@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="部署环境如下123centos 7python 3.6django 1.11.8 1.新建用户12adduser fsh #添加用户passwd fsh  #设置密码 给新建用户授权(个人用户的权限只可以在本home下有完整权限，其他目录要看别人授权。)新建的用户并不能使用1```sudo```命令的授权管理是在```sudoers```文件里面 [root@VM_0_12_centos ~]#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/04/12/title/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="部署环境如下123centos 7python 3.6django 1.11.8 1.新建用户12adduser fsh #添加用户passwd fsh  #设置密码 给新建用户授权(个人用户的权限只可以在本home下有完整权限，其他目录要看别人授权。)新建的用户并不能使用1```sudo```命令的授权管理是在```sudoers```文件里面 [root@VM_0_12_centos ~]#">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-12T14:00:00.547Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="部署环境如下123centos 7python 3.6django 1.11.8 1.新建用户12adduser fsh #添加用户passwd fsh  #设置密码 给新建用户授权(个人用户的权限只可以在本home下有完整权限，其他目录要看别人授权。)新建的用户并不能使用1```sudo```命令的授权管理是在```sudoers```文件里面 [root@VM_0_12_centos ~]#">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-title" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/12/title/" class="article-date">
+  <time datetime="2018-04-12T13:58:50.232Z" itemprop="datePublished">2018-04-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="部署环境如下"><a href="#部署环境如下" class="headerlink" title="部署环境如下"></a>部署环境如下</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">centos 7</span><br><span class="line">python 3.6</span><br><span class="line">django 1.11.8</span><br></pre></td></tr></table></figure>
+<p>1.新建用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adduser fsh #添加用户</span><br><span class="line">passwd fsh  #设置密码</span><br></pre></td></tr></table></figure></p>
+<p>给新建用户授权(个人用户的权限只可以在本home下有完整权限，其他目录要看别人授权。)新建的用户并不能使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```sudo```命令的授权管理是在```sudoers```文件里面</span><br></pre></td></tr></table></figure></p>
+<p>[root@VM_0_12_centos ~]# whereis sudoers<br>sudoers: /etc/sudoers /etc/sudoers.d /usr/libexec/sudoers.so /usr/share/man/man5/sudoers.5.gz<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.查看权限</span><br></pre></td></tr></table></figure></p>
+<p>[root@VM_0_12_centos ~]# ls -l /etc/sudoers<br>-r–r—– 1 root root 3907 Jun 23  2017 /etc/sudoers</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这里```r```表示只读,我们需要添加写入权限</span><br></pre></td></tr></table></figure>
+<p>[root@localhost ~]# chmod -v u+w /etc/sudoers<br>mode of “/etc/sudoers” changed from 0440 (r–r—–) to 0640 (rw-r—–)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">现在就有写入权限，我们需要更改添加内容，追加到用户</span><br></pre></td></tr></table></figure></p>
+<p>[root@localhost ~]# vim /etc/sudoers<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3.vim简单使用</span><br><span class="line">按```i```编写退出按一下```esc``` 输入```:``` 再输入```wq```保存退出```q```退出，```w```保存，```！```强制退出。</span><br><span class="line"></span><br><span class="line">找到root，在下面添加</span><br></pre></td></tr></table></figure></p>
+<h2 id="Allow-root-to-run-any-commands-anywher"><a href="#Allow-root-to-run-any-commands-anywher" class="headerlink" title="Allow root to run any commands anywher"></a>Allow root to run any commands anywher</h2><p>root    ALL=(ALL)       ALL<br>fsh  ALL=(ALL)       ALL  #fsh就是刚刚新增的用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wq退出保存后，要把写的权限收回</span><br></pre></td></tr></table></figure></p>
+<p>[root@VM_0_12_centos ~]# chmod -v u-w /etc/sudoers<br>mode of ‘/etc/sudoers’ changed from 0640 (rw-r—–) to 0440 (r–r—–)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">切换用户</span><br></pre></td></tr></table></figure>
+<p>su fsh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">4.切换国内源</span><br><span class="line">1、备份</span><br><span class="line"></span><br><span class="line">```mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure></p>
+<p>2、下载新的CentOS-Base.repo 到/etc/yum.repos.d/</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CentOS 5</span><br><span class="line"></span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo</span><br><span class="line">CentOS 6</span><br><span class="line"></span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo</span><br><span class="line">CentOS 7</span><br><span class="line"></span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br></pre></td></tr></table></figure>
+<p>3、之后运行<figure class="highlight plain"><figcaption><span>makecache```生成缓存</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">安装python3.6可能会依赖的文件</span><br></pre></td></tr></table></figure></p>
+<p>yum groupinstall “Development tools”</p>
+<p>yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python</span><br><span class="line">1. 获取</span><br></pre></td></tr></table></figure></p>
+<p>wget <a href="https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz</a><br>tar -xzvf Python-3.6.2.tgz -C  /tmp<br>cd  /tmp/Python-3.6.2/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.把Python3.6安装到 /usr/local 目录</span><br></pre></td></tr></table></figure></p>
+<p>./configure –prefix=/usr/local<br>make<br>make altinstall<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.更改/usr/bin/python链接</span><br></pre></td></tr></table></figure></p>
+<p>ln -s /usr/local/bin/python3.6 /usr/bin/python3<br>ln -s /usr/local//bin/pip3.6 /usr/bin/pip3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">maridb</span><br><span class="line">1. 安装</span><br></pre></td></tr></table></figure></p>
+<pre><code>sudo yum install mariadb-server
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.启动， 重启</span><br></pre></td></tr></table></figure>
+<pre><code>sudo systemctl start mariadb
+sudo systemctl restart mariadb
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.设置bind-ip</span><br></pre></td></tr></table></figure>
+<pre><code>vim /etc/my.cnf
+在 [mysqld]:
+    下面加一行
+    bind-address = 0.0.0.0
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4.设置外部ip可以访问</span><br></pre></td></tr></table></figure>
+<pre><code>先进入mysql才能运行下面命令:
+    mysql 直接进入就行
+
+GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;123456&apos; WITH GRANT OPTION;
+
+FLUSH PRIVILEGES
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">阿里云服务器需要开放端口，默认3306。</span><br><span class="line"></span><br><span class="line">nginx</span><br><span class="line">1.安装</span><br></pre></td></tr></table></figure>
+<p>sudo yum install epel-release<br>sudo yum install nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.启动</span><br></pre></td></tr></table></figure></p>
+<p>sudo systemctl start nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.如果系统开启了防火墙，开放http和https通信</span><br></pre></td></tr></table></figure></p>
+<p>sudo firewall-cmd –permanent –zone=public –add-service=http<br>sudo firewall-cmd –permanent –zone=public –add-service=https<br>sudo firewall-cmd –reload<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4.访问方式</span><br></pre></td></tr></table></figure></p>
+<p>http://服务器ip/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5.设置自启</span><br></pre></td></tr></table></figure></p>
+<p>sudo systemctl enable nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6.配置</span><br><span class="line">在项目下面新建conf/nginx/blog.conf文件</span><br></pre></td></tr></table></figure></p>
+<p>#user root;</p>
+<h1 id="the-upstream-component-nginx-needs-to-connect-to"><a href="#the-upstream-component-nginx-needs-to-connect-to" class="headerlink" title="the upstream component nginx needs to connect to"></a>the upstream component nginx needs to connect to</h1><p>upstream django {</p>
+<h1 id="server-unix-path-to-your-mysite-mysite-sock-for-a-file-socket"><a href="#server-unix-path-to-your-mysite-mysite-sock-for-a-file-socket" class="headerlink" title="server unix:///path/to/your/mysite/mysite.sock; # for a file socket"></a>server unix:///path/to/your/mysite/mysite.sock; # for a file socket</h1><p>server 127.0.0.1:8000; # for a web port socket (we’ll use this first)<br>}</p>
+<h1 id="configuration-of-the-server"><a href="#configuration-of-the-server" class="headerlink" title="configuration of the server"></a>configuration of the server</h1><p>error_log  /home/fsh/fsh/project/error.log;<br>server {</p>
+<h1 id="the-port-your-site-will-be-served-on"><a href="#the-port-your-site-will-be-served-on" class="headerlink" title="the port your site will be served on"></a>the port your site will be served on</h1><p>listen      80;</p>
+<h1 id="the-domain-name-it-will-serve-for"><a href="#the-domain-name-it-will-serve-for" class="headerlink" title="the domain name it will serve for"></a>the domain name it will serve for</h1><p>server_name 118.24.154.138 ; # substitute your machine’s IP address or FQDN<br>charset     utf-8;</p>
+<h1 id="max-upload-size"><a href="#max-upload-size" class="headerlink" title="max upload size"></a>max upload size</h1><p>client_max_body_size 75M;   # adjust to taste</p>
+<h1 id="Django-media"><a href="#Django-media" class="headerlink" title="Django media"></a>Django media</h1><p>location /media  {<br>    alias /home/fsh/fsh/project/blog_project_app/media;  # 指向django的media目录<br>}<br>location /static {<br>    alias /home/fsh/fsh/project/blog_project_app/static; # 指向django的static目&gt;录<br>}</p>
+<h1 id="Finally-send-all-non-media-requests-to-the-Django-server"><a href="#Finally-send-all-non-media-requests-to-the-Django-server" class="headerlink" title="Finally, send all non-media requests to the Django server."></a>Finally, send all non-media requests to the Django server.</h1><p>location / {<br>    uwsgi_pass  django;<br>    include     uwsgi_params; # the uwsgi_params file you installed<br>}<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">加入到启动配置文件中</span><br></pre></td></tr></table></figure>
+<p>sudo ln -s 你的目录/项目/conf/nginx/blog.conf /etc/nginx/conf.d/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">virtualenvwrapper</span><br><span class="line">1.安装</span><br></pre></td></tr></table></figure></p>
+<p>pip install virtualenvwrapper<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.编辑```.bashrc```文件</span><br></pre></td></tr></table></figure></p>
+<p>export WORKON_HOME=$HOME/.virtualenvs<br>source /usr/local/bin/virtualenvwrapper.sh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```virtualenvwrapper.sh```这个文件路径查找方法</span><br></pre></td></tr></table></figure></p>
+<p> whereis virtualenvwrapper.sh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.重新加载```.bashrc```文件</span><br></pre></td></tr></table></figure></p>
+<p>source ~/.bashrc<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4.新建虚拟环境</span><br></pre></td></tr></table></figure></p>
+<p>mkvirtualenv blog<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5.进入虚拟环境</span><br></pre></td></tr></table></figure></p>
+<p>workon blog</p>
+<p>#导出本地虚拟环境的包<br>pip freeze &gt; requirements.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6.安装依赖包</span><br></pre></td></tr></table></figure></p>
+<p>pip install -r requirements.txt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">uwsgi</span><br><span class="line">1.安装</span><br></pre></td></tr></table></figure>
+<p>#需要在虚拟环境下安装<br>pip install uwsgi<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">收集静态文件</span><br></pre></td></tr></table></figure></p>
+<p>STATIC_ROOT = os.path.join(BASE_DIR, “static/“)#加入到setting.py<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">运行命令</span><br></pre></td></tr></table></figure></p>
+<p>python manage.py collectstatic<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2.配置</span><br><span class="line">在项目目录下新建conf/uwsgi/uwsgi.ini</span><br></pre></td></tr></table></figure></p>
+<h1 id="mysite-uwsgi-ini-file"><a href="#mysite-uwsgi-ini-file" class="headerlink" title="mysite_uwsgi.ini file`"></a>mysite_uwsgi.ini file`</h1><pre><code>[uwsgi]
+
+# Django-related settings
+# the base directory (full path)
+chdir           = /home/fsh/fsh/project/blog_project_app/
+# Django&apos;s wsgi file
+module          = blog_project_app.wsgi
+# the virtualenv (full path)
+
+# process-related settings
+# master
+master          = true
+# maximum number of worker processes
+processes       = 4
+threads         = 2
+# the socket (use the full path to be safe
+socket          = 127.0.0.1:8000
+# ... with appropriate permissions - may be needed
+# chmod-socket    = 664
+# clear environment on exit
+vacuum          = true
+virtualenv = /home/fsh/.virtualenvs/Blog_app
+
+python-autoreload=1
+
+logto = /tmp/mylog.log
+
+stats = %(chdir)/conf/uwsgi/uwsgi.status
+pidfile = %(chdir)/conf/uwsgi/uwsgi.pid
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">说明：</span><br><span class="line">python-autoreload=1  python文件修改自动重启nginx</span><br><span class="line">chdir： 表示需要操作的目录，也就是项目的目录</span><br><span class="line">module： wsgi文件的路径</span><br><span class="line">processes： 进程数</span><br><span class="line">virtualenv：虚拟环境的目录</span><br></pre></td></tr></table></figure>
+<p>进入虚拟环境<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi -i ~/项目/conf/uwsgi/uwsgi.ini &amp;</span><br></pre></td></tr></table></figure></p>
+<p>运行nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/sbin/nginx</span><br></pre></td></tr></table></figure></p>
+<p>这里需要注意 一定是直接用nginx命令启动， 不要用systemctl启动nginx不然会有权限问题</p>
+<p>我们上面配置了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stats = %(chdir)/conf/uwsgi/uwsgi.status</span><br><span class="line">pidfile = %(chdir)/conf/uwsgi/uwsgi.pid</span><br></pre></td></tr></table></figure></p>
+<p>两个文件可以让uwsgi服务启动(start)停止(stop)重新装载(reload)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat uwsgi/uwsgi.pid</span><br></pre></td></tr></table></figure></p>
+<p>执行后可以看到pid号</p>
+<p>查看uwsgi进程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux | grep uwsgi</span><br></pre></td></tr></table></figure></p>
+<p>发现uwsgi主进程和上面的pid一样</p>
+<p>重启uwsgi<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --reload uwsgi/uwsgi.pid</span><br></pre></td></tr></table></figure></p>
+<p>停止<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --stop uwsgi/uwsgi.pid</span><br></pre></td></tr></table></figure></p>
+<p>这个命令返回一个json串，显示进程和worker的状态很详细<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --connect-and-read uwsgi/uwsgi.status</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/12/title/" data-id="cjfwlfhit000174usmyz8jgvw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/12/title/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
