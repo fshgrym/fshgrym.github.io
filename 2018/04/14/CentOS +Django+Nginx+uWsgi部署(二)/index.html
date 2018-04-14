@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ド゛゜范</title>
+  <title>CentOS +Django+Nginx+uWsgi部署(二) | ド゛゜范</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CentOS +Django+Nginx+uWsgi部署(二) 收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py colle">
+  <meta name="description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic  uwsgi  在项目目录下新建conf/uw">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ド゛゜范">
+<meta property="og:title" content="CentOS +Django+Nginx+uWsgi部署(二)">
 <meta property="og:url" content="http://yoursite.com/2018/04/14/CentOS +Django+Nginx+uWsgi部署(二)/index.html">
 <meta property="og:site_name" content="ド゛゜范">
-<meta property="og:description" content="CentOS +Django+Nginx+uWsgi部署(二) 收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py colle">
+<meta property="og:description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic  uwsgi  在项目目录下新建conf/uw">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-14T14:27:44.782Z">
+<meta property="og:updated_time" content="2018-04-14T14:30:19.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ド゛゜范">
-<meta name="twitter:description" content="CentOS +Django+Nginx+uWsgi部署(二) 收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py colle">
+<meta name="twitter:title" content="CentOS +Django+Nginx+uWsgi部署(二)">
+<meta name="twitter:description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic  uwsgi  在项目目录下新建conf/uw">
   
     <link rel="alternative" href="/atom.xml" title="ド゛゜范" type="application/atom+xml">
   
@@ -157,10 +157,24 @@
             <article id="post-CentOS +Django+Nginx+uWsgi部署(二)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CentOS +Django+Nginx+uWsgi部署(二)
+    </h1>
+  
+
+        
+        <a href="/2018/04/14/CentOS +Django+Nginx+uWsgi部署(二)/" class="archive-article-date">
+  	<time datetime="2018-04-14T14:10:23.969Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-14</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="CentOS-Django-Nginx-uWsgi部署-二"><a href="#CentOS-Django-Nginx-uWsgi部署-二" class="headerlink" title="CentOS +Django+Nginx+uWsgi部署(二)"></a>CentOS +Django+Nginx+uWsgi部署(二)</h2><blockquote>
+        <blockquote>
 <p>收集静态文件</p>
 </blockquote>
 <p>打开项目的seeting文件，加入到文件后面。</p>
