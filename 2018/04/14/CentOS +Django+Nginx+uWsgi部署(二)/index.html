@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CentOS +Django+Nginx+uWsgi部署(一) | ド゛゜范</title>
+  <title>ド゛゜范</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="部署环境  12CentOS 7Python 3.6  新建用户  如果你是一台全新的服务器的话。通常我们使用root用户登录，但是root下部署代码是不太安全的。建议新建一个普通用户，以下命令将创建一个拥有超级权限的新用户。 12adduser fsh #添加用户passwd fsh  #设置密码 接下来给新建的用户进行root授权，普通用户在home下才具备完整的权限，访问其他目录是需要授权">
+  <meta name="description" content="CentOS +Django+Nginx+uWsgi部署(二) 收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py colle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS +Django+Nginx+uWsgi部署(一)">
-<meta property="og:url" content="http://yoursite.com/2018/04/14/CentOS +Django+Nginx+uWsgi部署(一)/index.html">
+<meta property="og:title" content="ド゛゜范">
+<meta property="og:url" content="http://yoursite.com/2018/04/14/CentOS +Django+Nginx+uWsgi部署(二)/index.html">
 <meta property="og:site_name" content="ド゛゜范">
-<meta property="og:description" content="部署环境  12CentOS 7Python 3.6  新建用户  如果你是一台全新的服务器的话。通常我们使用root用户登录，但是root下部署代码是不太安全的。建议新建一个普通用户，以下命令将创建一个拥有超级权限的新用户。 12adduser fsh #添加用户passwd fsh  #设置密码 接下来给新建的用户进行root授权，普通用户在home下才具备完整的权限，访问其他目录是需要授权">
+<meta property="og:description" content="CentOS +Django+Nginx+uWsgi部署(二) 收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py colle">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-14T14:07:16.198Z">
+<meta property="og:updated_time" content="2018-04-14T14:27:44.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS +Django+Nginx+uWsgi部署(一)">
-<meta name="twitter:description" content="部署环境  12CentOS 7Python 3.6  新建用户  如果你是一台全新的服务器的话。通常我们使用root用户登录，但是root下部署代码是不太安全的。建议新建一个普通用户，以下命令将创建一个拥有超级权限的新用户。 12adduser fsh #添加用户passwd fsh  #设置密码 接下来给新建的用户进行root授权，普通用户在home下才具备完整的权限，访问其他目录是需要授权">
+<meta name="twitter:title" content="ド゛゜范">
+<meta name="twitter:description" content="CentOS +Django+Nginx+uWsgi部署(二) 收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py colle">
   
     <link rel="alternative" href="/atom.xml" title="ド゛゜范" type="application/atom+xml">
   
@@ -154,103 +154,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CentOS +Django+Nginx+uWsgi部署(一)" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CentOS +Django+Nginx+uWsgi部署(二)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      CentOS +Django+Nginx+uWsgi部署(一)
-    </h1>
-  
-
-        
-        <a href="/2018/04/14/CentOS +Django+Nginx+uWsgi部署(一)/" class="archive-article-date">
-  	<time datetime="2018-04-14T13:56:46.152Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-14</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>部署环境</p>
+        <hr>
+<h2 id="CentOS-Django-Nginx-uWsgi部署-二"><a href="#CentOS-Django-Nginx-uWsgi部署-二" class="headerlink" title="CentOS +Django+Nginx+uWsgi部署(二)"></a>CentOS +Django+Nginx+uWsgi部署(二)</h2><blockquote>
+<p>收集静态文件</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CentOS 7</span><br><span class="line">Python 3.6</span><br></pre></td></tr></table></figure>
+<p>打开项目的seeting文件，加入到文件后面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STATIC_ROOT = os.path.join(BASE_DIR, &quot;static/&quot;)</span><br></pre></td></tr></table></figure>
+<p>进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py collectstatic</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>新建用户</p>
+<p>uwsgi</p>
 </blockquote>
-<p>如果你是一台全新的服务器的话。通常我们使用root用户登录，但是root下部署代码是不太安全的。建议新建一个普通用户，以下命令将创建一个拥有超级权限的新用户。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adduser fsh #添加用户</span><br><span class="line">passwd fsh  #设置密码</span><br></pre></td></tr></table></figure>
-<p>接下来给新建的用户进行root授权，普通用户在home下才具备完整的权限，访问其他目录是需要授权的。<br><a id="more"></a><br><code>sudo</code>命令的授权管理在sudoers文件。怎么找到这个文件呢？当然是有办法的，使用whereis来查找。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@VM_0_12_centos ~]# whereis sudoers</span><br><span class="line">sudoers: /etc/sudoers /etc/sudoers.d /usr/libexec/sudoers.so /usr/share/man/man5/sudoers.5.gz</span><br></pre></td></tr></table></figure>
-<p>查看sudoers文件权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@VM_0_12_centos ~]# ls -l /etc/sudoers</span><br><span class="line">-r--r----- 1 root root 3907 Jun 23  2017 /etc/sudoers</span><br></pre></td></tr></table></figure>
-<p><code>r</code>表示的是只读，而我们需要更改文件配置。需要添加写入权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# chmod -v u+w /etc/sudoers</span><br><span class="line">mode of &quot;/etc/sudoers&quot; changed from 0440 (r--r-----) to 0640 (rw-r-----)</span><br></pre></td></tr></table></figure>
-<p>打开sudoers文件,找到root这里添加我们新建的用户后保存。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim /etc/sudoers</span><br><span class="line">## Allow root to run any commands anywher  </span><br><span class="line">root    ALL=(ALL)       ALL  </span><br><span class="line">fsh  ALL=(ALL)       ALL  #fsh就是刚刚新增的用户</span><br></pre></td></tr></table></figure>
-<p>vim 简单使用</p>
-<p>按<code>i</code>写入，退出按一下<code>esc</code> 输入<code>:</code> 再输入<code>wq</code>保存。</p>
-<p>不保存退出按<code>q</code>退出，<code>！</code>强制退出。其他使用命令在网上都能查到。</p>
-<p>保存之后需要的刚刚的写入权限收回</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@VM_0_12_centos ~]# chmod -v u-w /etc/sudoers</span><br><span class="line">mode of ‘/etc/sudoers’ changed from 0640 (rw-r-----) to 0440 (r--r-----)</span><br></pre></td></tr></table></figure>
-<p>切换用户<code>su 用户名</code></p>
+<p>在项目目录下新建conf/uwsgi/uwsgi.ini</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"># mysite_uwsgi.ini file`</span><br><span class="line">    [uwsgi]</span><br><span class="line"></span><br><span class="line">    # Django-related settings</span><br><span class="line">    # the base directory (full path)</span><br><span class="line">    chdir           = /home/fsh/fsh/project/blog_project_app/</span><br><span class="line">    # Django&apos;s wsgi file</span><br><span class="line">    module          = blog_project_app.wsgi</span><br><span class="line">    # the virtualenv (full path)</span><br><span class="line"></span><br><span class="line">    # process-related settings</span><br><span class="line">    # master</span><br><span class="line">    master          = true</span><br><span class="line">    # maximum number of worker processes</span><br><span class="line">    processes       = 4</span><br><span class="line">    threads         = 2</span><br><span class="line">    # the socket (use the full path to be safe</span><br><span class="line">    socket          = 127.0.0.1:8000</span><br><span class="line">    # ... with appropriate permissions - may be needed</span><br><span class="line">    # chmod-socket    = 664</span><br><span class="line">    # clear environment on exit</span><br><span class="line">    vacuum          = true</span><br><span class="line">    virtualenv = /home/fsh/.virtualenvs/Blog_app</span><br><span class="line"></span><br><span class="line">    python-autoreload=1</span><br><span class="line"></span><br><span class="line">    logto = /tmp/mylog.log</span><br><span class="line"></span><br><span class="line">    stats = %(chdir)/conf/uwsgi/uwsgi.status</span><br><span class="line">    pidfile = %(chdir)/conf/uwsgi/uwsgi.pid</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">说明</span><br><span class="line">python-autoreload=1  python文件修改自动重启nginx</span><br><span class="line">chdir： 表示需要操作的目录，也就是项目的目录</span><br><span class="line">module： wsgi文件的路径</span><br><span class="line">processes： 进程数</span><br><span class="line">virtualenv：虚拟环境的目录</span><br><span class="line">stats = %(chdir)/conf/uwsgi/uwsgi.status #会自动生成</span><br><span class="line">pidfile = %(chdir)/conf/uwsgi/uwsgi.pid #会自动生成</span><br><span class="line">两个文件可以让uwsgi服务启动(start)停止(stop)重新装载(reload)</span><br></pre></td></tr></table></figure>
+<p>运行uwsgi</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi -i ~/项目/conf/uwsgi/uwsgi.ini &amp;</span><br></pre></td></tr></table></figure>
+<p>重载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --reload ~/项目/conf/uwsgi/uwsgi.pid</span><br></pre></td></tr></table></figure>
+<p>停止</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --reload ~/项目/conf/uwsgi/uwsgi.pid</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>安装软件</p>
+<p>Nginx</p>
 </blockquote>
-<p>这里我yum源更换为国内源</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">​```mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup```#备份</span><br></pre></td></tr></table></figure>
-<p>下载新的CentOS-Base.repo 到/etc/yum.repos.d/，对应版本如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CentOS 5</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo</span><br><span class="line">CentOS 6</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo</span><br><span class="line">CentOS 7</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br></pre></td></tr></table></figure>
-<p>生成缓存</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>安装python3.6</p>
-</blockquote>
-<p>安装依赖包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum groupinstall &quot;Development tools&quot;</span><br><span class="line"></span><br><span class="line">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel</span><br></pre></td></tr></table></figure>
-<p>下载源码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz</span><br></pre></td></tr></table></figure>
-<p>编译</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz</span><br><span class="line">tar -xzvf Python-3.6.2.tgz -C  /tmp</span><br><span class="line">cd  /tmp/Python-3.6.2/</span><br><span class="line">./configure --prefix=/usr/local</span><br><span class="line">make</span><br><span class="line">make altinstall</span><br></pre></td></tr></table></figure>
-<p>加入软连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/bin/python3.6 /usr/bin/python3</span><br><span class="line">ln -s /usr/local//bin/pip3.6 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
-<p>虚拟环境安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install virtualenvwrapper</span><br></pre></td></tr></table></figure>
-<p>打开~/.bashrc文件，加入以下配置。。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export WORKON_HOME=$HOME/.virtualenvs</span><br><span class="line">source /usr/local/bin/virtualenvwrapper.sh</span><br></pre></td></tr></table></figure>
-<p>重载~/.bashrc文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-<p>新建环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv blog</span><br></pre></td></tr></table></figure>
-<p>进入环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">workon blog</span><br></pre></td></tr></table></figure>
-<p>导出本地虚拟环境的包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt #导出</span><br><span class="line">pip install -r requirements.txt #安装</span><br></pre></td></tr></table></figure>
-<p>好了，到这里如果没有什么错误就可以继续下面的步骤。</p>
-<p>uwsgi安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#需要在虚拟环境下安装</span><br><span class="line">pip install uwsgi</span><br></pre></td></tr></table></figure>
-<p>Nginx安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br><span class="line">sudo yum install nginx</span><br></pre></td></tr></table></figure>
-<p>启动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start nginx</span><br></pre></td></tr></table></figure>
-<p>如果系统开启了防火墙，需要开放http和https通信</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --permanent --zone=public --add-service=http </span><br><span class="line">sudo firewall-cmd --permanent --zone=public --add-service=https</span><br><span class="line">sudo firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-<p>设置为开机自启</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable nginx</span><br></pre></td></tr></table></figure>
-<p>访问方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://服务器ip/</span><br></pre></td></tr></table></figure>
-<p>maridb(mysql)安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install mariadb-devel</span><br><span class="line">sudo yum install mariadb-server</span><br></pre></td></tr></table></figure>
-<p>启动重启</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start mariadb</span><br><span class="line">sudo systemctl restart mariadb</span><br></pre></td></tr></table></figure>
-<p>设置bind-ip</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/my.cnf</span><br><span class="line">    在 [mysqld]:</span><br><span class="line">        下面加一行</span><br><span class="line">        bind-address = 0.0.0.0</span><br></pre></td></tr></table></figure>
-<p>设置外部ip可以访问，先进入mysql才能运行下面命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;123456&apos; WITH GRANT OPTION;</span><br><span class="line">FLUSH PRIVILEGES</span><br></pre></td></tr></table></figure>
-<p>阿里云服务器需要开放端口默认3306，到这里环境搭建就结束了。部署请看下一篇！</p>
+<p>在项目下面新建conf/nginx/blog.conf文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># the upstream component nginx needs to connect to</span><br><span class="line">upstream django &#123;</span><br><span class="line"># server unix:///path/to/your/mysite/mysite.sock; # for a file socket</span><br><span class="line">server 127.0.0.1:8000; # for a web port socket (we&apos;ll use this first)</span><br><span class="line">&#125;</span><br><span class="line"># configuration of the server</span><br><span class="line"></span><br><span class="line">error_log  /home/fsh/fsh/project/error.log;</span><br><span class="line">server &#123;</span><br><span class="line"># the port your site will be served on</span><br><span class="line">listen      80;</span><br><span class="line"># the domain name it will serve for</span><br><span class="line">server_name 118.24.154.138 ; # substitute your machine&apos;s IP address or FQDN</span><br><span class="line">charset     utf-8;</span><br><span class="line"></span><br><span class="line"># max upload size</span><br><span class="line">client_max_body_size 75M;   # adjust to taste</span><br><span class="line"></span><br><span class="line"># Django media</span><br><span class="line">location /media  &#123;</span><br><span class="line">    alias /home/fsh/fsh/project/blog_project_app/media;  # 指向django的media目录</span><br><span class="line">&#125;</span><br><span class="line">location /static &#123;</span><br><span class="line">    alias /home/fsh/fsh/project/blog_project_app/static; # 指向django的static目&gt;录</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># Finally, send all non-media requests to the Django server.</span><br><span class="line">location / &#123;</span><br><span class="line">    uwsgi_pass  django;</span><br><span class="line">    include     uwsgi_params; # the uwsgi_params file you installed</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>启动Nginx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/sbin/nginx</span><br></pre></td></tr></table></figure>
+<p>403错误</p>
+<p>更改/etc/nginx/nginx.conf里面的<code>user nginx</code>改成<code>user root</code></p>
+<p>500错误</p>
+<p>一般是路径问题，在uwsgi的错误log里面查看。</p>
 
       
 
@@ -340,7 +280,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/14/CentOS +Django+Nginx+uWsgi部署(一)/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/14/CentOS +Django+Nginx+uWsgi部署(二)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -354,18 +294,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/14/CentOS +Django+Nginx+uWsgi部署(二)/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2018/04/14/CentOS +Django+Nginx+uWsgi部署(一)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CentOS +Django+Nginx+uWsgi部署(一)</div>
       <i class="icon-circle-right"></i>
     </a>
   
