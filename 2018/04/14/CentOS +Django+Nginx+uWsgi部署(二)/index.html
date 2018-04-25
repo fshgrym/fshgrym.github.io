@@ -9,13 +9,14 @@
   <title>CentOS +Django+Nginx+uWsgi部署(二) | ド゛゜范</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic  uwsgi  在项目目录下新建conf/uw">
+<meta name="keywords" content="Python,Django,Nginx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS +Django+Nginx+uWsgi部署(二)">
 <meta property="og:url" content="http://yoursite.com/2018/04/14/CentOS +Django+Nginx+uWsgi部署(二)/index.html">
 <meta property="og:site_name" content="ド゛゜范">
 <meta property="og:description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic  uwsgi  在项目目录下新建conf/uw">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-24T17:03:15.413Z">
+<meta property="og:updated_time" content="2018-04-25T13:33:41.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS +Django+Nginx+uWsgi部署(二)">
 <meta name="twitter:description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic  uwsgi  在项目目录下新建conf/uw">
@@ -59,17 +60,9 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/home">首页</a></li>
+				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/archives">归档</a></li>
-	        
-				<li><a href="/categories">分类</a></li>
-	        
-				<li><a href="/tags">标签</a></li>
-	        
-				<li><a href="/search">搜索</a></li>
-	        
-				<li><a href="/commonweal">公益404</a></li>
+				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -127,14 +120,6 @@
 			
 				
 			
-				
-			
-				
-			
-				
-			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -150,20 +135,12 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 16.666666666666668%"><a href="/home">首页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/archives">归档</a></li>
-		        
-					<li style="width: 16.666666666666668%"><a href="/categories">分类</a></li>
-		        
-					<li style="width: 16.666666666666668%"><a href="/tags">标签</a></li>
-		        
-					<li style="width: 16.666666666666668%"><a href="/search">搜索</a></li>
-		        
-					<li style="width: 16.666666666666668%"><a href="/commonweal">公益404</a></li>
+					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -191,7 +168,7 @@
 
         
         <a href="/2018/04/14/CentOS +Django+Nginx+uWsgi部署(二)/" class="archive-article-date">
-  	<time datetime="2018-04-14T14:10:23.969Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-14</time>
+  	<time datetime="2018-04-14T11:08:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-14</time>
 </a>
         
 
@@ -272,6 +249,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -336,18 +332,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/25/git学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/14/CentOS +Django+Nginx+uWsgi部署(一)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          git学习笔记
+          CentOS +Django+Nginx+uWsgi部署(一)
         
       </div>
     </a>
   
   
-    <a href="/2018/04/14/CentOS +Django+Nginx+uWsgi部署(一)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CentOS +Django+Nginx+uWsgi部署(一)</div>
+    <a href="/2018/04/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -519,6 +515,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
