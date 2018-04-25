@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://blog.fangshaohui.cn/"/>
   <updated>2018-04-25T13:37:37.442Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://blog.fangshaohui.cn/</id>
   
   <author>
     <name>ド゛゜范</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>git学习笔记</title>
-    <link href="http://yoursite.com/2018/04/24/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2018/04/24/git学习笔记/</id>
+    <link href="https://blog.fangshaohui.cn/2018/04/24/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://blog.fangshaohui.cn/2018/04/24/git学习笔记/</id>
     <published>2018-04-24T15:08:32.000Z</published>
     <updated>2018-04-25T13:37:37.442Z</updated>
     
@@ -32,14 +32,14 @@
     </summary>
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+      <category term="Git" scheme="https://blog.fangshaohui.cn/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>CentOS +Django+Nginx+uWsgi部署(一)</title>
-    <link href="http://yoursite.com/2018/04/15/CentOS%20+Django+Nginx+uWsgi%E9%83%A8%E7%BD%B2(%E4%B8%80)/"/>
-    <id>http://yoursite.com/2018/04/15/CentOS +Django+Nginx+uWsgi部署(一)/</id>
+    <link href="https://blog.fangshaohui.cn/2018/04/15/CentOS%20+Django+Nginx+uWsgi%E9%83%A8%E7%BD%B2(%E4%B8%80)/"/>
+    <id>https://blog.fangshaohui.cn/2018/04/15/CentOS +Django+Nginx+uWsgi部署(一)/</id>
     <published>2018-04-15T11:08:32.000Z</published>
     <updated>2018-04-25T13:37:02.451Z</updated>
     
@@ -61,18 +61,18 @@
     </summary>
     
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+      <category term="Python" scheme="https://blog.fangshaohui.cn/tags/Python/"/>
     
-      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
+      <category term="Django" scheme="https://blog.fangshaohui.cn/tags/Django/"/>
     
-      <category term="Nginx" scheme="http://yoursite.com/tags/Nginx/"/>
+      <category term="Nginx" scheme="https://blog.fangshaohui.cn/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>CentOS +Django+Nginx+uWsgi部署(二)</title>
-    <link href="http://yoursite.com/2018/04/14/CentOS%20+Django+Nginx+uWsgi%E9%83%A8%E7%BD%B2(%E4%BA%8C)/"/>
-    <id>http://yoursite.com/2018/04/14/CentOS +Django+Nginx+uWsgi部署(二)/</id>
+    <link href="https://blog.fangshaohui.cn/2018/04/14/CentOS%20+Django+Nginx+uWsgi%E9%83%A8%E7%BD%B2(%E4%BA%8C)/"/>
+    <id>https://blog.fangshaohui.cn/2018/04/14/CentOS +Django+Nginx+uWsgi部署(二)/</id>
     <published>2018-04-14T11:08:32.000Z</published>
     <updated>2018-04-25T13:33:41.107Z</updated>
     
@@ -95,18 +95,18 @@
     </summary>
     
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+      <category term="Python" scheme="https://blog.fangshaohui.cn/tags/Python/"/>
     
-      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
+      <category term="Django" scheme="https://blog.fangshaohui.cn/tags/Django/"/>
     
-      <category term="Nginx" scheme="http://yoursite.com/tags/Nginx/"/>
+      <category term="Nginx" scheme="https://blog.fangshaohui.cn/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/04/12/hello-world/"/>
-    <id>http://yoursite.com/2018/04/12/hello-world/</id>
+    <link href="https://blog.fangshaohui.cn/2018/04/12/hello-world/"/>
+    <id>https://blog.fangshaohui.cn/2018/04/12/hello-world/</id>
     <published>2018-04-12T13:39:23.485Z</published>
     <updated>2018-04-24T17:03:24.833Z</updated>
     
