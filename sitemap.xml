@@ -2,21 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.fangshaohui.cn/photos/data.json</loc>
+    <loc>https://blog.fangshaohui.cn/README.html</loc>
     
-    <lastmod>2018-04-25T15:05:19.936Z</lastmod>
+    <lastmod>2018-04-25T15:32:48.189Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.fangshaohui.cn/photos/index.html</loc>
+    <loc>https://blog.fangshaohui.cn/blog_photos/data.json</loc>
+    
+    <lastmod>2018-04-25T15:27:16.917Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.fangshaohui.cn/blog_photos/index.html</loc>
     
     <lastmod>2018-04-25T14:34:03.841Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.fangshaohui.cn/photos/ins.json</loc>
+    <loc>https://blog.fangshaohui.cn/blog_photos/ins.json</loc>
     
     <lastmod>2018-04-25T14:29:07.582Z</lastmod>
     
