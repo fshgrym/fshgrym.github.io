@@ -9,18 +9,18 @@
   <meta name="360-site-verification" content="9f9af2568b845630a9ce2c56cc711c4e" />
   <title>CentOS +Django+Nginx+uWsgi部署(二) | ド゛゜范</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic  uwsgi  在项目目录下新建conf/uw">
+  <meta name="description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic 如果你对django的setting不是很熟悉">
 <meta name="keywords" content="Python,Django,Nginx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS +Django+Nginx+uWsgi部署(二)">
 <meta property="og:url" content="https://blog.fangshaohui.cn/2018/04/14/CentOS +Django+Nginx+uWsgi部署(二)/index.html">
 <meta property="og:site_name" content="ド゛゜范">
-<meta property="og:description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic  uwsgi  在项目目录下新建conf/uw">
+<meta property="og:description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic 如果你对django的setting不是很熟悉">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-25T13:33:41.107Z">
+<meta property="og:updated_time" content="2018-04-29T19:42:19.380Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS +Django+Nginx+uWsgi部署(二)">
-<meta name="twitter:description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic  uwsgi  在项目目录下新建conf/uw">
+<meta name="twitter:description" content="收集静态文件  打开项目的seeting文件，加入到文件后面。 1STATIC_ROOT = os.path.join(BASE_DIR, &amp;quot;static/&amp;quot;) 进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。 1python manage.py collectstatic 如果你对django的setting不是很熟悉">
   
     <link rel="alternative" href="/atom.xml" title="ド゛゜范" type="application/atom+xml">
   
@@ -205,6 +205,10 @@ var _hmt = _hmt || [];
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STATIC_ROOT = os.path.join(BASE_DIR, &quot;static/&quot;)</span><br></pre></td></tr></table></figure>
 <p>进入虚拟环境，cd到项目文件manage.py下运行命令，会自动收集Django注册过app的静态文件。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py collectstatic</span><br></pre></td></tr></table></figure>
+<p>如果你对django的setting不是很熟悉，可能会把STATICFILES_DIRS和STATIC_ROOT混淆,</p>
+<p>STATICFILES_DIRS 列表中的目录是开发时创建的静态目录。</p>
+<p>STATIC_ROOT 是Django框架放到生产环境中的唯一的一个静态目录。　</p>
+<p>而当你设置DEBUG=False时，就必须在Django框架前端部署nginx或者其他web服务器来提供静态访问入口。</p>
 <blockquote>
 <p>uwsgi</p>
 </blockquote>
