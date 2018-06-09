@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.fangshaohui.cn/2018/06/10/%E4%B8%8B%E8%BD%BD%E4%B8%AD%E9%97%B4%E4%BB%B6/</loc>
+    
+    <lastmod>2018-06-09T17:06:14.929Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.fangshaohui.cn/2018/04/14/CentOS%20+Django+Nginx+uWsgi%E9%83%A8%E7%BD%B2(%E4%BA%8C)/</loc>
     
     <lastmod>2018-04-29T19:42:20.000Z</lastmod>
