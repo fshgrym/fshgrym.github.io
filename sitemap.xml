@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.fangshaohui.cn/photos/ins.json</loc>
+    
+    <lastmod>2018-06-10T05:09:15.404Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.fangshaohui.cn/photos/index.html</loc>
+    
+    <lastmod>2018-06-10T05:09:00.819Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.fangshaohui.cn/2018/06/10/%E4%B8%8B%E8%BD%BD%E4%B8%AD%E9%97%B4%E4%BB%B6/</loc>
     
     <lastmod>2018-06-09T17:09:27.072Z</lastmod>
@@ -26,20 +40,6 @@
     <loc>https://blog.fangshaohui.cn/README.html</loc>
     
     <lastmod>2018-04-25T15:32:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.fangshaohui.cn/blog_photos/index.html</loc>
-    
-    <lastmod>2018-04-25T14:34:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.fangshaohui.cn/blog_photos/ins.json</loc>
-    
-    <lastmod>2018-04-25T14:29:08.000Z</lastmod>
     
   </url>
   
